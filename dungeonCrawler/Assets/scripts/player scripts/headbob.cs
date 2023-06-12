@@ -48,7 +48,7 @@ public class headbob : MonoBehaviour
     {
       //calculate the motion
       Vector3 pos = Vector3.zero;
-      //use a sign wave to calculate the position, then return it
+      //use a sine wave to calculate the position, then return it
       pos.y+=Mathf.Sin(Time.time * _frequency) * _amplitude;
       //pos.x += Mathf.Cos(Time.time * _frequency) * _amplitude;
       return pos;
