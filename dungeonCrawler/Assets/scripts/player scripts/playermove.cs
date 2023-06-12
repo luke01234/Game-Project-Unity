@@ -66,7 +66,7 @@ public class playermove : MonoBehaviour, IDamageable
     //Reset player position at spawn point on call
     void PressRToRestart()
     {
-      //transform.position=spawnPoint.position; <= idk why the fuck this doesnt work/ I am retarded i now know why this does not work, but im leaving it here anyway
+      
       controller.enabled = false;
       controller.gameObject.transform.position = spawnPoint.position;
       controller.enabled=true; 
@@ -116,7 +116,7 @@ public class playermove : MonoBehaviour, IDamageable
       {
         return;
       }
-      //speed that you accelerate = your ecceleration speed times change in time time times wishspeed
+      //speed that you accelerate = your ecceleration speed x change in time x wishspeed
       accelSpeed=accel*Time.deltaTime*wishSpeed;
       //accleration never above addspeed
       if(accelSpeed>addSpeed)
